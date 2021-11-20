@@ -1,0 +1,6 @@
+<header [ngClass]="{'blue': toggle[0], 'red': toggle[1], 'black':toggle[2], 'green': toggle[3]}">{{title}}</header>
+<app-contentdetailcomponent
+*ngFor='let con of content'
+[con] = 'con'
+(changeColorId) = 'changeColor($event)'
+></app-contentdetailcomponent>
